@@ -15,9 +15,6 @@ def rotation(list1, list2):
         if list2[i] == key:
             index = i
             break
-
-    #if index == 0:
-    #    return False
     
     for j in range(len(list1)):
         i2 = (index + j) % len(list1)
