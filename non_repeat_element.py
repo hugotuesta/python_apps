@@ -5,8 +5,9 @@ if multiple uniques then return only the first unique
 """
 
 def non_repeat_element(string):
-    string = string.replace(' ', '')
+    string = string.replace(' ', '').lower()
     count = {}
+    uniques = []
 
     for letter in string:
         if letter in count:
@@ -16,8 +17,8 @@ def non_repeat_element(string):
 
     for letter in string:
         if count[letter] == 1:
-            return letter
+            uniques.append(letter)
     
-    return None
+    return uniques
 
 print(non_repeat_element('I Apple Ape Peels'))
