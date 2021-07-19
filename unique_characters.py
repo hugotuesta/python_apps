@@ -8,13 +8,13 @@ def unique_characters1(string):
 
 def unique_characters2(string):
     string = string.replace(' ', '')
-    characters = set()
+    count = {}
 
     for letter in string:
-        if letter in characters:
+        if letter in count:
             return False
         else:
-            characters.add(letter)
+            count[letter] = 1
 
     return True
 
