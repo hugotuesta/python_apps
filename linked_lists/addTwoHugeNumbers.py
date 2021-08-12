@@ -1,9 +1,9 @@
 # Singly-linked lists are already defined with this interface:
-# class ListNode(object):
-#   def __init__(self, x):
-#     self.value = x
-#     self.next = None
-#
+class ListNode(object):
+  def __init__(self, x):
+    self.value = x
+    self.next = None
+
 import math
 
 def addTwoHugeNumbers_with_lists(a, b):
@@ -31,3 +31,37 @@ def get_text(node):
         text.append(current.value)
         current = current.next
     return text
+
+def addTwoHugeNumbers_with_linked_lists(a, b):
+    list_a = reverse(a)
+    list_b = reverse(b)
+    
+    carry = 0
+    result = None
+    
+    while list_a or list_b or carry > 0:
+        partial_sum = ((list_a.value if list_a is not None else 0) + 
+                      (list_b.value if list_b is not None else 0) + 
+                      carry)
+                
+        node = ListNode(partial_sum % 10000)
+        node.next = result
+        
+        result = node
+        carry = partial_sum // 10000
+        
+        if list_a:
+            list_a = list_a.next
+        if list_b:
+            list_b = list_b.next
+            
+    return result
+    
+def reverse(linked_list):
+    current = linked_list
+    previous = None
+    
+    while current is not None:
+        previous, current.next, current = current, previous, current.next
+        
+    return previous
