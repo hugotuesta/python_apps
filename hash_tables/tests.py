@@ -1,6 +1,7 @@
 import unittest
 from are_following_patterns import are_following_patterns
 from grouping_dishes import grouping_dishes
+from contains_close_nums import contains_close_nums
 
 class TestAreFollowingPattern(unittest.TestCase):
 
@@ -39,6 +40,14 @@ class TestGroupingDishes(unittest.TestCase):
                                        ["Quesadilla", "Chicken", "Cheese"]])
 
         self.assertEqual(test_result, expected_result)
+
+class TestContainsCloseNums(unittest.TestCase):
+
+    def test_first_case(self):
+        self.assertEqual(contains_close_nums([0, 1, 2, 3, 5, 2], 3), True)
+
+    def test_second_case(self):
+        self.assertEqual(contains_close_nums([0, 1, 2, 3, 5, 2], 2), False)
 
 if __name__ == '__main__':
     unittest.main()
