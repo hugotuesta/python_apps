@@ -1,5 +1,6 @@
 import unittest
 from remove_k_from_list import show_list, removeKFromList, ListNode
+from is_list_palindrome import is_list_palindrome
 from merge_two_linked_lists import merge_two_linked_lists
 
 class TestRemoveKFromList(unittest.TestCase):
@@ -27,6 +28,23 @@ class TestRemoveKFromList(unittest.TestCase):
         ll2 = removeKFromList(l2, 10)
         
         self.assertEqual(show_list(ll2), [2, 3, 4, 5, 6, 7])
+
+class TestIsListPalindrome(unittest.TestCase):
+    
+    def test_it_is_palindrome(self):
+        l1 = ListNode(0)
+        l1.next = ListNode(1)
+        l1.next.next = ListNode(0)
+
+        self.assertEqual(is_list_palindrome(l1), True)
+
+    def test_it_not_is_palindrome(self):
+        l1 = ListNode(1)
+        l1.next = ListNode(2)
+        l1.next.next = ListNode(2)
+        l1.next.next.next = ListNode(3)
+
+        self.assertEqual(is_list_palindrome(l1), False)
 
 class TestMergeTwoLinkedLists(unittest.TestCase):
 
