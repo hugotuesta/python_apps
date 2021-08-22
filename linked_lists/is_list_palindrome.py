@@ -4,7 +4,7 @@ class ListNode(object):
     self.value = x
     self.next = None
 
-def isListPalindrome(l):
+def is_list_palindrome(l):
     current = l 
     elements = []
 
