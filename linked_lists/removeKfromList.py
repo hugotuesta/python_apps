@@ -24,3 +24,20 @@ def removeKFromList(l, k):
             current = current.next  
 
     return l
+
+def remove_k_from_list(l, k):  
+    dummy = ListNode(0)
+    tail = dummy
+    
+    while True:
+        if not l:
+            tail.next = None
+            break
+            
+        if l.value != k:
+            tail.next = l
+            tail = tail.next
+        
+        l = l.next
+    
+    return dummy.next
