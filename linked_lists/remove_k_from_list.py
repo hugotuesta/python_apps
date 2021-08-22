@@ -1,17 +1,18 @@
 # Singly-linked lists are already defined with this interface:
 class ListNode(object):
-  def __init__(self, x):
-    self.value = x
-    self.next = None
+    def __init__(self, x):
+        self.value = x
+        self.next = None
 
 def show_list(linked_list):
-  elements = []
-  current = linked_list
-  while current:
-    elements.append(current.value)
-    current = current.next
+    elements = []
+    current = linked_list
     
-  return elements
+    while current:
+        elements.append(current.value)
+        current = current.next
+
+    return elements
 
 def removeKFromList(l, k):  
     current = l
