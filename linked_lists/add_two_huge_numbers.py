@@ -6,7 +6,7 @@ class ListNode(object):
 
 import math
 
-def addTwoHugeNumbers_with_lists(a, b):
+def add_two_huge_numbers_with_lists(a, b):
     size = 4
     text_a = get_text(a)
     text_b = get_text(b)
@@ -32,7 +32,7 @@ def get_text(node):
         current = current.next
     return text
 
-def addTwoHugeNumbers_with_linked_lists(a, b):
+def add_two_huge_numbers_with_linked_lists(a, b):
     list_a = reverse(a)
     list_b = reverse(b)
     
@@ -40,8 +40,8 @@ def addTwoHugeNumbers_with_linked_lists(a, b):
     result = None
     
     while list_a or list_b or carry > 0:
-        partial_sum = ((list_a.value if list_a is not None else 0) + 
-                      (list_b.value if list_b is not None else 0) + 
+        partial_sum = ((list_a.value if list_a else 0) + 
+                      (list_b.value if list_b else 0) + 
                       carry)
                 
         node = ListNode(partial_sum % 10000)
@@ -61,7 +61,7 @@ def reverse(linked_list):
     current = linked_list
     previous = None
     
-    while current is not None:
+    while current:
         previous, current.next, current = current, previous, current.next
         
     return previous
