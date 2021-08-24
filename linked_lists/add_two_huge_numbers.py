@@ -61,7 +61,7 @@ def reverse(linked_list):
     current = linked_list
     previous = None
     
-    while current is not None:
+    while current:
         previous, current.next, current = current, previous, current.next
         
     return previous
