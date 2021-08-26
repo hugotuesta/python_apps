@@ -3,6 +3,7 @@ from remove_k_from_list import show_list, removeKFromList, ListNode
 from is_list_palindrome import is_list_palindrome
 from merge_two_linked_lists import merge_two_linked_lists
 from add_two_huge_numbers import add_two_huge_numbers_with_linked_lists
+from reverse_nodes_in_k_groups import reverse_nodes_in_k_groups
 
 class TestRemoveKFromList(unittest.TestCase):
     
@@ -90,6 +91,29 @@ class TestAddTwoHugeNumbers(unittest.TestCase):
 
         self.assertEqual(show_list(result), [223, 104, 105])
 
+class TestReverseNodesInKGroups(unittest.TestCase):
+
+    def test_reverse_first_case(self):
+        l1 = ListNode(1)
+        l1.next = ListNode(2)
+        l1.next.next = ListNode(3)
+        l1.next.next.next = ListNode(4)
+        l1.next.next.next.next = ListNode(5)
+
+        result = reverse_nodes_in_k_groups(l1, 2)
+
+        self.assertEqual(show_list(result), [2, 1, 4, 3, 5])
+    
+    def test_reverse_second_case(self):
+        l1 = ListNode(1)
+        l1.next = ListNode(2)
+        l1.next.next = ListNode(3)
+        l1.next.next.next = ListNode(4)
+        l1.next.next.next.next = ListNode(5)
+
+        result = reverse_nodes_in_k_groups(l1, 1)
+
+        self.assertEqual(show_list(result), [1, 2, 3, 4, 5])
 
 if __name__ == '__main__':
     unittest.main()
