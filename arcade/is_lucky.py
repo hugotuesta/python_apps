@@ -8,3 +8,4 @@ def is_lucky(n):
 print(is_lucky(1230))
 print(is_lucky(134008))
 print(is_lucky(261534))
+print(is_lucky(261531))
