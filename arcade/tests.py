@@ -1,6 +1,7 @@
 import pytest
 from sort_by_height import sort_by_height
 from matrix_element_sum import matrix_elements_sum
+from is_lucky import is_lucky
 
 def test_sort_by_height_standard_forest():
     expected_result = [-1, 150, 160, 170, -1, -1, 180, 190]
@@ -49,3 +50,23 @@ def test_matrix_elements_sum_case_4():
     test_result = matrix_elements_sum([[1,2,3,4,5]])
 
     assert test_result == expected_result
+
+def test_is_lucky_four_digit():
+    test_result = is_lucky(1230)
+
+    assert test_result == True
+
+def test_is_lucky_six_digit():
+    test_result = is_lucky(134008)
+
+    assert test_result == True
+
+def test_is_not_lucky_six_digit():
+    test_result = is_lucky(261534)
+
+    assert test_result == False
+
+def test_is_lucky_six_digit_two():
+    test_result = is_lucky(261531)
+
+    assert test_result == True
