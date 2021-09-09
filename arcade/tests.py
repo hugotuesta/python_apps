@@ -2,6 +2,7 @@ import pytest
 from sort_by_height import sort_by_height
 from matrix_element_sum import matrix_elements_sum
 from is_lucky import is_lucky
+from common_character_count import common_character_count
 
 def test_sort_by_height_standard_forest():
     expected_result = [-1, 150, 160, 170, -1, -1, 180, 190]
@@ -70,3 +71,8 @@ def test_is_lucky_six_digit_two():
     test_result = is_lucky(261531)
 
     assert test_result == True
+
+def test_common_character_count():
+    test_result = common_character_count('aabcc', 'adcaa')
+
+    assert test_result == 3
