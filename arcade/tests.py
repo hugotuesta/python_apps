@@ -3,6 +3,7 @@ from sort_by_height import sort_by_height
 from matrix_element_sum import matrix_elements_sum
 from is_lucky import is_lucky
 from common_character_count import common_character_count
+from adjacent_elements_product import adjacent_elements_product
 
 def test_sort_by_height_standard_forest():
     expected_result = [-1, 150, 160, 170, -1, -1, 180, 190]
@@ -76,3 +77,18 @@ def test_common_character_count():
     test_result = common_character_count('aabcc', 'adcaa')
 
     assert test_result == 3
+
+def test_adjacent_elements_product_01():
+    test_result = adjacent_elements_product([3, 6, -2, -5, 7, 3])
+
+    assert test_result == 21
+
+def test_adjacent_elements_product_02():
+    test_result = adjacent_elements_product([-23, 4, -3, 8, -12])
+
+    assert test_result == -12
+
+def test_adjacent_elements_product_03():
+    test_result = adjacent_elements_product([5, 1, 2, 3, 1, 4])
+
+    assert test_result == 6
