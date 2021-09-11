@@ -1,9 +1,10 @@
 import pytest
-from sort_by_height import sort_by_height
-from matrix_element_sum import matrix_elements_sum
-from is_lucky import is_lucky
-from common_character_count import common_character_count
 from adjacent_elements_product import adjacent_elements_product
+from almost_increasing_sequence import almost_increasing_sequence
+from common_character_count import common_character_count
+from is_lucky import is_lucky
+from matrix_element_sum import matrix_elements_sum
+from sort_by_height import sort_by_height
 
 def test_sort_by_height_standard_forest():
     expected_result = [-1, 150, 160, 170, -1, -1, 180, 190]
@@ -92,3 +93,8 @@ def test_adjacent_elements_product_03():
     test_result = adjacent_elements_product([5, 1, 2, 3, 1, 4])
 
     assert test_result == 6
+
+def test_almost_increasing_sequence():
+    test_result = almost_increasing_sequence([1, 3, 2])
+
+    assert test_result == True
