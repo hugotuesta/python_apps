@@ -1,5 +1,6 @@
 import pytest
 from adjacent_elements_product import adjacent_elements_product
+from all_longest_strings import all_longest_strings
 from almost_increasing_sequence import almost_increasing_sequence
 from common_character_count import common_character_count
 from is_lucky import is_lucky
@@ -98,3 +99,15 @@ def test_almost_increasing_sequence():
     test_result = almost_increasing_sequence([1, 3, 2])
 
     assert test_result == True
+
+def test_all_longest_strings_01():
+    expected_result = ['aba', 'vcd', 'aba']
+    test_result = all_longest_strings(['aba', 'aa', 'ad', 'vcd', 'aba'])
+
+    assert test_result == expected_result
+
+def test_all_longest_strings_02():
+    expected_result = ['aokbcwthc']
+    test_result = all_longest_strings(['onsfnib', 'aokbcwthc', 'jrfcw'])
+
+    assert test_result == expected_result
