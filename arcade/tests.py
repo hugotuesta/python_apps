@@ -4,6 +4,7 @@ from all_longest_strings import all_longest_strings
 from almost_increasing_sequence import almost_increasing_sequence
 from common_character_count import common_character_count
 from is_lucky import is_lucky
+from make_array_consecutive import make_array_consecutive
 from matrix_element_sum import matrix_elements_sum
 from sort_by_height import sort_by_height
 
@@ -111,3 +112,28 @@ def test_all_longest_strings_02():
     test_result = all_longest_strings(['onsfnib', 'aokbcwthc', 'jrfcw'])
 
     assert test_result == expected_result
+
+def test_make_array_consecutive_01():
+    test_result = make_array_consecutive([6, 2, 3, 8])
+
+    assert test_result == 3
+
+def test_make_array_consecutive_02():
+    test_result = make_array_consecutive([0, 3])
+
+    assert test_result == 2
+
+def test_make_array_consecutive_03():
+    test_result = make_array_consecutive([5, 4, 6])
+
+    assert test_result == 0
+
+def test_make_array_consecutive_04():
+    test_result = make_array_consecutive([6, 3])
+
+    assert test_result == 2
+
+def test_make_array_consecutive_05():
+    test_result = make_array_consecutive([1])
+
+    assert test_result == 0
