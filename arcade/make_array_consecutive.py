@@ -1,4 +1,4 @@
-def make_array_consecutive2(statues):
+def make_array_consecutive(statues):
     maximum = max(statues)
     minimum = min(statues)
     
@@ -7,4 +7,4 @@ def make_array_consecutive2(statues):
     
     return len(complete - statuses)
 
-print(make_array_consecutive2([6, 2, 3, 8]))
+print(make_array_consecutive([6, 2, 3, 8]))
