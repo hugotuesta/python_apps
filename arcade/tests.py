@@ -6,6 +6,7 @@ from common_character_count import common_character_count
 from is_lucky import is_lucky
 from make_array_consecutive import make_array_consecutive
 from matrix_element_sum import matrix_elements_sum
+from reverse_in_parentheses import reverse_in_parentheses
 from sort_by_height import sort_by_height
 
 def test_sort_by_height_standard_forest():
@@ -137,3 +138,39 @@ def test_make_array_consecutive_05():
     test_result = make_array_consecutive([1])
 
     assert test_result == 0
+
+def test_reverse_in_parentheses_01():
+    expected_result = 'rab'
+    test_result = reverse_in_parentheses('(bar)')
+
+    assert test_result == expected_result
+
+def test_reverse_in_parentheses_02():
+    expected_result = 'foorabbaz'
+    test_result = reverse_in_parentheses('foo(bar)baz')
+
+    assert test_result == expected_result
+
+def test_reverse_in_parentheses_03():
+    expected_result = 'cbadgfe'
+    test_result = reverse_in_parentheses('(abc)d(efg)')
+
+    assert test_result == expected_result
+
+def test_reverse_in_parentheses_04():
+    expected_result = 'foobazrabblim'
+    test_result = reverse_in_parentheses('foo(bar(baz))blim')
+
+    assert test_result == expected_result
+
+def test_reverse_in_parentheses_05():
+    expected_result = ''
+    test_result = reverse_in_parentheses('()')
+
+    assert test_result == expected_result
+
+def test_reverse_in_parentheses_06():
+    expected_result = ''
+    test_result = reverse_in_parentheses('')
+
+    assert test_result == expected_result
