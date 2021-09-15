@@ -7,6 +7,7 @@ from is_lucky import is_lucky
 from make_array_consecutive import make_array_consecutive
 from matrix_element_sum import matrix_elements_sum
 from reverse_in_parentheses import reverse_in_parentheses
+from shape_area import shape_area
 from sort_by_height import sort_by_height
 
 def test_sort_by_height_standard_forest():
@@ -174,3 +175,18 @@ def test_reverse_in_parentheses_06():
     test_result = reverse_in_parentheses('')
 
     assert test_result == expected_result
+
+def test_shape_area_01():
+    test_result = shape_area(1)
+
+    assert test_result == 1
+
+def test_shape_area_02():
+    test_result = shape_area(5)
+
+    assert test_result == 41
+
+def test_shape_area_03():
+    test_result = shape_area(100)
+
+    assert test_result == 19801
