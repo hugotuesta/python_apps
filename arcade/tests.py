@@ -190,3 +190,8 @@ def test_shape_area_03():
     test_result = shape_area(100)
 
     assert test_result == 19801
+
+def test_shape_area_04():
+    test_result = shape_area(9999)
+
+    assert test_result == 199940005
