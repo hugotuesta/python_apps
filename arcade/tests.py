@@ -78,10 +78,15 @@ def test_is_lucky_six_digit_two():
 
     assert test_result == True
 
-def test_common_character_count():
+def test_common_character_count_01():
     test_result = common_character_count('aabcc', 'adcaa')
 
     assert test_result == 3
+
+def test_common_character_count_02():
+    test_result = common_character_count('abbcdeffg', 'aafggbcbjk')
+
+    assert test_result == 6
 
 def test_adjacent_elements_product_01():
     test_result = adjacent_elements_product([3, 6, -2, -5, 7, 3])
