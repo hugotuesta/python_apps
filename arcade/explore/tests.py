@@ -89,3 +89,7 @@ def test_palindrome_rearranging_03():
 def test_palindrome_rearranging_04():
     test_result = palindrome_rearranging('abdhuierf')
     assert test_result == False
+
+def test_palindrome_rearranging_05():
+    test_result = palindrome_rearranging('uiyouiyot')
+    assert test_result == True
