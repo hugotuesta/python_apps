@@ -80,3 +80,9 @@ def test_is_ipv4_address_06():
     test_result = True
 
     assert test_result == expected_result
+
+def test_is_ipv4_address_07():
+    expected_result = is_ipv4_address('1.255.55.00')
+    test_result = False
+
+    assert test_result == expected_result
