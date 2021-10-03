@@ -21,6 +21,12 @@ def test_array_maximal_adjacent_difference_03():
 
     assert test_result == expected_result
 
+def test_array_maximal_adjacent_difference_04():
+    expected_result = array_maximal_adjacent_difference([-5, 3, 6, 13, -2])
+    test_result = 15
+
+    assert test_result == expected_result
+
 def test_avoid_obstacles_01():
     expected_result = avoid_obstacles([5, 3, 6, 7, 9])
     test_result = 4
