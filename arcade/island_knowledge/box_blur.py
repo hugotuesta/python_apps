@@ -12,7 +12,6 @@ def box_blur(image):
             row_3 = [image[i+2][j], image[i+2][j+1], image[i+2][j+2]]
             
             value = (sum(row_1) + sum(row_2) + sum(row_3)) // 9
-            
             result_row.append(value)
         
         result.append(result_row)  
